@@ -19,12 +19,14 @@ requirements:
     - cmake
     - swig
     - boost 1.64.*
+    - pango 1.40.*
     - proj4 4.9.3
     - python-eccodes
     - python
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
   run:
+    - pango 1.40.*
     - proj4 4.9.3
     - python-eccodes
     - python
