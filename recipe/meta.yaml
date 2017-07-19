@@ -24,6 +24,7 @@ requirements:
     - python-eccodes
     - python
     - perl 5.22.2.1
+    - perl-xml-parser
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
   run:
