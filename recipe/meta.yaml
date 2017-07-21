@@ -34,14 +34,10 @@ requirements:
     - proj4 4.9.3
     - python-eccodes
     - python
-    - perl 5.22.2.1
-    - perl-xml-parser
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
 
 test:
-  commands:
-    - metgram
   imports:
     - Magics
     - Magics.macro
