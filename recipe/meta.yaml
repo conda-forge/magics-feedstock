@@ -44,7 +44,7 @@ test:
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
   license: Apache 2.0
-  license_file: LICENSE
+  license_family: Apache
   summary: ECMWF's Meteorological plotting software
 
 extra:
