@@ -18,30 +18,41 @@ requirements:
   build:
     - cmake
     - swig
+    - pkgconfig
     - boost 1.64.*
-    - proj.4 4.9.3
+    - glib
+    - pango 1.40.*
+    - proj4 4.9.3
     - python-eccodes
     - python
+    - perl 5.22.2.1
+    - perl-xml-parser
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
   run:
-    - proj.4 4.9.3
+    - pango 1.40.*
+    - proj4 4.9.3
     - python-eccodes
     - python
+    - simplejson
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
 
 test:
-  commands:
-    - metgram
+  imports:
+    - Magics
+    - Magics.macro
+    - Magics.metgram
+    - Magics.toolbox
 
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
   license: Apache 2.0
-  license_file: LICENSE
+  license_family: Apache
   summary: ECMWF's Meteorological plotting software
 
 extra:
   recipe-maintainers:
     - kynan
     - carletes
+    - StephanSiemen
