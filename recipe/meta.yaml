@@ -39,6 +39,9 @@ requirements:
     # - netcdf-cxx4
 
 test:
+  commands:
+    - conda inspect linkages -p $PREFIX magics  # [not win]
+    - conda inspect objects -p $PREFIX magics  # [osx]
   imports:
     - Magics
     - Magics.macro
