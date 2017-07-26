@@ -20,6 +20,7 @@ requirements:
     - swig
     - pkgconfig
     - boost 1.64.*
+    - expat 2.2.*
     - glib
     - pango 1.40.*
     - proj4 4.9.3
@@ -30,6 +31,7 @@ requirements:
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
   run:
+    - expat 2.2.*
     - pango 1.40.*
     - proj4 4.9.3
     - python-eccodes
@@ -39,6 +41,9 @@ requirements:
     # - netcdf-cxx4
 
 test:
+  commands:
+    - conda inspect linkages -p $PREFIX magics  # [not win]
+    - conda inspect objects -p $PREFIX magics  # [osx]
   imports:
     - Magics
     - Magics.macro
