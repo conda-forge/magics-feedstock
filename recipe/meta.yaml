@@ -10,7 +10,7 @@ source:
   sha256: 8df27f8f262ebc32a61f8696df15a7b4a6e4203b2a8e53fe7aa13caa1c4e3fa4
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win or not py27]
   detect_binary_files_with_prefix: true
 
@@ -26,7 +26,7 @@ requirements:
     - proj4 4.9.3
     - python-eccodes
     - python
-    - numpy x.x
+    - numpy 1.8.*
     - perl 5.22.2.1
     - perl-xml-parser
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
@@ -37,7 +37,7 @@ requirements:
     - proj4 4.9.3
     - python-eccodes
     - python
-    - numpy x.x
+    - numpy >=1.8
     - simplejson
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
