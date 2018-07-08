@@ -19,13 +19,14 @@ requirements:
     - cmake
     - swig
     - pkgconfig
-    - boost 1.64.*
+    - boost 1.67.*
     - expat 2.2.*
     - glib
     - pango 1.40.*
     - proj4 4.9.3
     - python-eccodes
     - python
+    - jinja2
     - numpy 1.8.*
     - perl 5.22.2.1
     - perl-xml-parser
