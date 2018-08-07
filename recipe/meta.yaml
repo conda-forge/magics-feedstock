@@ -10,34 +10,38 @@ source:
   sha256: 8df27f8f262ebc32a61f8696df15a7b4a6e4203b2a8e53fe7aa13caa1c4e3fa4
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or not py27]
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
     - cmake
+    - perl 5.22.2.1
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - swig
     - pkgconfig
-    - boost 1.64.*
-    - expat 2.2.*
+    - boost
+    - expat
     - glib
-    - pango 1.40.*
-    - proj4 4.9.3
+    - pango
+    - proj4
     - python-eccodes
     - python
-    - numpy 1.8.*
-    - perl 5.22.2.1
+    - numpy
     - perl-xml-parser
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
   run:
-    - expat 2.2.*
-    - pango 1.40.*
-    - proj4 4.9.3
+    - expat
+    - pango
+    - proj4
     - python-eccodes
     - python
-    - numpy >=1.8
+    - {{ pin_compatible('numpy') }}
     - simplejson
     # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
     # - netcdf-cxx4
