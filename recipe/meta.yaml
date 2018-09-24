@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - cmake 3.1.*
+    - cmake >=3.1.*
     - swig
     - pkgconfig
     - boost 1.64.*
