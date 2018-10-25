@@ -28,6 +28,7 @@ requirements:
     - jinja2
     - libnetcdf
     - zlib
+    - boost
   run:
     - expat 2.2.*
     - pango 1.40.*
