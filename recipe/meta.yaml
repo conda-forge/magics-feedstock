@@ -18,27 +18,27 @@ requirements:
   build:
     - cmake
     - pkg-config
-    - expat 2.2.*
+    - expat 
     - glib
-    - pango 1.40.*
-    - proj4 4.9.3
+    - pango
+    - proj4
     - eccodes
     - python
-    - numpy 1.8.*
+    - numpy 
     - jinja2
     - libnetcdf
-    - zlib
+    - hdf5
     - boost
   run:
-    - expat 2.2.*
-    - pango 1.40.*
-    - proj4 4.9.3
+    - expat 
+    - pango 
+    - proj4
     - eccodes
     - python
-    - numpy >=1.8
+    - numpy 
     - simplejson
     - libnetcdf
-    - zlib
+    - hdf5
 
 test:
   commands:
