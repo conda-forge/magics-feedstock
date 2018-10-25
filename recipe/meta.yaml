@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - cmake
-    - pkgconfig
+    - pkg-config
     - expat 2.2.*
     - glib
     - pango 1.40.*
