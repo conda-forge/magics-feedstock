@@ -27,7 +27,6 @@ requirements:
     - numpy 
     - jinja2
     - libnetcdf
-    - hdf5
     - boost
   run:
     - expat 
@@ -38,7 +37,6 @@ requirements:
     - numpy 
     - simplejson
     - libnetcdf
-    - hdf5
 
 test:
   commands:
