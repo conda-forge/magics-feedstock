@@ -1,4 +1,4 @@
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: magics
@@ -7,7 +7,7 @@ package:
 source:
   fn: Magics-{{ version }}-Source.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/3473464/Magics-{{ version }}-Source.tar.gz
-  sha256: da5f95b03e5e175e1886cc14dc45eab39af76bb2f0e40e2c20192b0683cd23e6
+  sha256: c70c6ffbb9b1b946266327e16851b9f708df185a4509066d9e193012f924334a
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - jinja2
     - libnetcdf
     - boost
+    - libpng
   run:
     - expat 
     - pango 
