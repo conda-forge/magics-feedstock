@@ -29,8 +29,7 @@ requirements:
     - numpy 1.8.*
     - perl 5.22.2.1
     - perl-xml-parser
-    # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
-    # - netcdf-cxx4
+    - netcdf4
   run:
     - expat 2.2.*
     - pango 1.40.*
@@ -39,8 +38,7 @@ requirements:
     - python
     - numpy >=1.8
     - simplejson
-    # ecBuild fails to find the C++ bindings: the library name is libnetcdf_c++4
-    # - netcdf-cxx4
+    - netcdf4
 
 test:
   commands:

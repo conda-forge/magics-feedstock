@@ -39,12 +39,11 @@ export CFLAGS="$CFLAGS -fPIC -I$PREFIX/include"
 src_dir="$(pwd)"
 mkdir ../build
 cd ../build
-# FIXME: re-enable NETCDF once NetCDF detection is fixed
 cmake $src_dir \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DENABLE_PYTHON=1 \
   -DENABLE_FORTRAN=0 \
-  -DENABLE_NETCDF=0 \
+  -DENABLE_NETCDF=1 \
   -DENABLE_ECCODES=1
 
 make -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
