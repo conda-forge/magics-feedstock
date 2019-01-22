@@ -18,19 +18,19 @@ requirements:
   build:
     - cmake
     - pkgconfig
-    - boost 1.64.*
-    - expat 2.2.*
+    - boost
+    - expat
     - glib
-    - pango 1.40.*
-    - proj4 4.9.3
+    - pango
+    - proj4
     - eccodes
-    - perl 5.22.2.1
+    - perl
     - perl-xml-parser
     - libnetcdf
   run:
-    - expat 2.2.*
-    - pango 1.40.*
-    - proj4 4.9.3
+    - expat
+    - pango
+    - proj4
     - eccodes
     - simplejson
     - libnetcdf
