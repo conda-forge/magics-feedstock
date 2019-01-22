@@ -1,4 +1,4 @@
-{% set version = "3.4.0.2" %}
+{% set version = "3.4.0.3" %}
 
 package:
   name: magics
@@ -7,10 +7,10 @@ package:
 source:
   fn: Magics-{{ version }}-Source.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/121845745/Magics-{{ version }}-Source.tar.gz
-  sha256: 6e41247769891d9c5a2d155b1d0f50c7629f664d35c98d8fa1310f4fde2561e0
+  sha256: 1fed6c087b59227d0e865e7b4c2a343b9528be88a423487d6d9eba3668efd788
 
 build:
-  number: 1
+  number: 1000
   skip: True  # [win and vc<14]
   detect_binary_files_with_prefix: true
   features:
