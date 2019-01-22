@@ -11,7 +11,7 @@ source:
 
 build:
   number: 2
-  skip: True  # [win or not py27]
+  skip: True  # [win]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -24,9 +24,7 @@ requirements:
     - glib
     - pango 1.40.*
     - proj4 4.9.3
-    - python-eccodes
-    - python
-    - numpy 1.8.*
+    - eccodes
     - perl 5.22.2.1
     - perl-xml-parser
     - netcdf4
@@ -34,9 +32,7 @@ requirements:
     - expat 2.2.*
     - pango 1.40.*
     - proj4 4.9.3
-    - python-eccodes
-    - python
-    - numpy >=1.8
+    - eccodes
     - simplejson
     - netcdf4
 
