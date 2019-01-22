@@ -3,7 +3,7 @@ cd build
 
 :: get gtk+ bundle
 curl -O -L http://ftp.gnome.org/pub/gnome/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip
-unzip gtk+-bundle_2.22.1-20101229_win64.zip -d %LIBRARY_PREFIX%
+unzip -n gtk+-bundle_2.22.1-20101229_win64.zip -d %LIBRARY_PREFIX%
 rm gtk+-bundle_2.22.1-20101229_win64.zip
 set GTK=%LIBRARY_PREFIX%
 set PATH=%PATH%;%GTK%\bin;%GTK%\lib
