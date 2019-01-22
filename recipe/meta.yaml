@@ -27,14 +27,14 @@ requirements:
     - eccodes
     - perl 5.22.2.1
     - perl-xml-parser
-    - netcdf4
+    - libnetcdf
   run:
     - expat 2.2.*
     - pango 1.40.*
     - proj4 4.9.3
     - eccodes
     - simplejson
-    - netcdf4
+    - libnetcdf
 
 test:
   commands:
