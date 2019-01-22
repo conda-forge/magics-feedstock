@@ -17,7 +17,6 @@ build:
 requirements:
   build:
     - cmake
-    - swig
     - pkgconfig
     - boost 1.64.*
     - expat 2.2.*
