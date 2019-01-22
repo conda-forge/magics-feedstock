@@ -10,30 +10,48 @@ source:
   sha256: 6e41247769891d9c5a2d155b1d0f50c7629f664d35c98d8fa1310f4fde2561e0
 
 build:
-  number: 0
-  skip: True  # [win]
+  number: 1
+  skip: True  # [win and vc<14]
   detect_binary_files_with_prefix: true
+  features:
+    - vc14  # [win and py>=35]
 
 requirements:
   build:
     - cmake
-    - pkgconfig
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - m2-bash  # [win]
+    - m2-findutils  # [win]
+    - m2-coreutils  # [win]
+    - m2-grep  # [win]
+    - m2-sed  # [win]
+    - m2-gawk  # [win]
+    - m2-diffutils  # [win]
+    - m2-unzip  # [win]
+  host:
+    - pkgconfig  # [not win]
     - boost
     - expat
-    - glib
-    - pango
+    - glib  # [not win]
+    - pango  # [not win]
     - proj4
     - eccodes
-    - perl
-    - perl-xml-parser
+    - perl  # [not win]
+    - perl-xml-parser  # [not win]
+    - m2-perl  # [win]
     - libnetcdf
+    - pthreads-win32  # [win]
+    - libiconv  # [win]
   run:
     - expat
-    - pango
+    - pango  # [not win]
     - proj4
     - eccodes
-    - simplejson
+    - simplejson  # [not win]
     - libnetcdf
+    - pthreads-win32  # [win]
+    - libiconv  # [win]
 
 test:
   commands:
