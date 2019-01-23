@@ -29,7 +29,7 @@ if errorlevel 1 exit 1
 :: so tests can find the magics dlls
 set PATH=%PATH%;%SRC_DIR%\build\bin
 
-ctest
+ctest -VV
 if errorlevel 1 exit 1
 
 nmake install
