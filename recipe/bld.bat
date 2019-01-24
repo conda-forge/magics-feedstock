@@ -20,6 +20,8 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D ENABLE_FORTRAN=0 ^
       -D GTK_PATH=%GTK% ^
+      -E env ECCODES_SAMPLES_PATH=%ECCODES_SAMPLES_PATH% ^
+      -E env ECCODES_DEFINITION_PATH=%ECCODES_DEFINITION_PATH% ^
       ..
 if errorlevel 1 exit 1
 
