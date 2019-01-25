@@ -15,14 +15,12 @@ set INCLUDE=%INCLUDE%;%GTK%\include\glib-2.0;%GTK%\lib\glib-2.0\include
 set CFLAGS=
 set CXXFLAGS=
 
-cmake -E env ECCODES_SAMPLES_PATH=%ECCODES_SAMPLES_PATH% ^
-             ECCODES_DEFINITION_PATH=%ECCODES_DEFINITION_PATH% ^
-      cmake -G "NMake Makefiles" ^
-            -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
-            -D CMAKE_BUILD_TYPE=Release ^
-            -D ENABLE_FORTRAN=0 ^
-            -D GTK_PATH=%GTK% ^
-            ..
+cmake -G "NMake Makefiles" ^
+      -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -D CMAKE_BUILD_TYPE=Release ^
+      -D ENABLE_FORTRAN=0 ^
+      -D GTK_PATH=%GTK% ^
+      ..
 if errorlevel 1 exit 1
 
 nmake
