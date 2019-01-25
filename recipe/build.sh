@@ -41,7 +41,7 @@ mkdir ../build
 cd ../build
 cmake $src_dir \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
-  -DENABLE_PYTHON=1 \
+  -DENABLE_PYTHON=0 \
   -DENABLE_FORTRAN=0 \
   -DENABLE_NETCDF=1
 
