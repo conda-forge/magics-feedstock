@@ -18,7 +18,6 @@ set CXXFLAGS=
 cmake -G "NMake Makefiles" ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_BUILD_TYPE=Release ^
-      -D ENABLE_PYTHON=0 ^
       -D ENABLE_FORTRAN=0 ^
       -D GTK_PATH=%GTK% ^
       ..
