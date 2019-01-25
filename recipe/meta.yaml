@@ -30,6 +30,8 @@ requirements:
     - m2-diffutils  # [win]
     - m2-unzip  # [win]
   host:
+    - {{ compiler('c') }}  # [linux]
+    - {{ compiler('cxx') }}  # [linux]
     - pkgconfig  # [not win]
     - boost
     - expat
