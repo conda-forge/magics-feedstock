@@ -32,7 +32,7 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
-    - pkgconfig  # [not win]
+    - pkg-config  # [not win]
     - boost
     - expat
     - glib  # [not win]
