@@ -10,7 +10,7 @@ source:
   sha256: 7637fc02342b7a8ecf6c974486bd2dbfee37ddb64c12bef714d5079907edbf9a
 
 build:
-  number: 1011
+  number: 1012
   skip: True  # [win and vc<14]
   detect_binary_files_with_prefix: true
   features:
@@ -21,6 +21,7 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - python
     - pip
     - m2-bash  # [win]
     - m2-findutils  # [win]
@@ -33,6 +34,7 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
+    - python
     - pip
     - pkg-config  # [not win]
     - boost
