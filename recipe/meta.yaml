@@ -21,8 +21,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - python
-    - pip
     - m2-bash  # [win]
     - m2-findutils  # [win]
     - m2-coreutils  # [win]
@@ -34,7 +32,6 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
-    - python
     - pip
     - pkg-config  # [not win]
     - boost
