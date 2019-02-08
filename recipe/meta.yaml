@@ -32,6 +32,7 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
+    - pip
     - pkg-config  # [not win]
     - boost
     - expat
@@ -39,9 +40,6 @@ requirements:
     - pango  # [not win]
     - proj4
     - eccodes
-    - perl  # [not win]
-    - perl-xml-parser  # [not win]
-    - m2-perl  # [win]
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
