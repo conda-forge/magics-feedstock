@@ -22,21 +22,15 @@ macos_min_version:
 - '10.9'
 pango:
 - '1.40'
-perl:
-- '5.26'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
   expat:
     max_pin: x.x
-  glib:
-    max_pin: x.x
   libnetcdf:
     max_pin: x.x
   pango:
     max_pin: x.x
-  perl:
-    max_pin: x.x.x
   proj4:
     max_pin: x.x.x
 proj4:
