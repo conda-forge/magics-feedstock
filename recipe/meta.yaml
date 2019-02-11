@@ -46,6 +46,7 @@ requirements:
     - pthreads-win32  # [win]
     - libiconv  # [win]
     - jinja2
+    - qt  # [not win]
   run:
     - expat
     - pango  # [not win]
@@ -55,6 +56,7 @@ requirements:
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
+    - qt  # [not win]
 
 test:
   commands:
