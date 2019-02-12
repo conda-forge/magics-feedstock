@@ -28,6 +28,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxcb') }}  # [linux]
     - m2-bash  # [win]
     - m2-findutils  # [win]
     - m2-coreutils  # [win]
