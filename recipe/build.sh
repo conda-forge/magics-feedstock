@@ -50,7 +50,7 @@ eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib
 
 if [[ $(uname) == Linux ]]; then
     echo "libGL:" >> $BUILD_OUTPUT 2>&1
-    locate libGL.so.1 >> $BUILD_OUTPUT 2>&1
+    find $PREFIX -name libGL.so.1 >> $BUILD_OUTPUT 2>&1
     echo "PATH:" >> $BUILD_OUTPUT 2>&1
     echo $PATH >> $BUILD_OUTPUT 2>&1
 fi
