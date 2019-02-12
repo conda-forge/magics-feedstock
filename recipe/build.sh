@@ -47,6 +47,14 @@ cmake $src_dir \
 
 make -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib
+
+if [[ $(uname) == Linux ]]; then
+    echo "libGL:" >> $BUILD_OUTPUT 2>&1
+    locate libGL.so.1 >> $BUILD_OUTPUT 2>&1
+    echo "PATH:" >> $BUILD_OUTPUT 2>&1
+    echo $PATH >> $BUILD_OUTPUT 2>&1
+fi
+
 ctest --output-on-failure -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 make install >> $BUILD_OUTPUT 2>&1
 
