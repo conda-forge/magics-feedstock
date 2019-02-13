@@ -82,10 +82,10 @@ test:
     - conda inspect linkages -p $PREFIX magics  # [not win]
     - conda inspect objects -p $PREFIX magics  # [osx]
   imports:
-    - Magics
-    - Magics.macro
-    - Magics.metgram
-    - Magics.toolbox
+    - Magics  # [not linux]
+    - Magics.macro  # [not linux]
+    - Magics.metgram  # [not linux]
+    - Magics.toolbox  # [not linux]
 
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
