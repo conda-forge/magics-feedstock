@@ -49,12 +49,6 @@ make -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib
 
 if [[ $(uname) == Linux ]]; then
-    echo "libGL:" >> $BUILD_OUTPUT 2>&1
-    find $PREFIX -name libGL.so.1 >> $BUILD_OUTPUT 2>&1
-    echo "PATH:" >> $BUILD_OUTPUT 2>&1
-    echo $PATH >> $BUILD_OUTPUT 2>&1
-    echo "LD_LIBRARY_PATH:" >> $BUILD_OUTPUT 2>&1
-    echo $LD_LIBRARY_PATH >> $BUILD_OUTPUT 2>&1
     # Tell Linux where to find libGL.so.1 and other libs needed for Qt
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BUILD_PREFIX/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib64/
 fi
