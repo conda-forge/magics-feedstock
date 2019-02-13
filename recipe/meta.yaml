@@ -70,6 +70,11 @@ test:
   commands:
     - conda inspect linkages -p $PREFIX magics  # [not win]
     - conda inspect objects -p $PREFIX magics  # [osx]
+  imports:
+    - Magics
+    - Magics.macro
+    - Magics.metgram
+    - Magics.toolbox
 
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
