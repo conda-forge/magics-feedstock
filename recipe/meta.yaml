@@ -57,6 +57,7 @@ requirements:
     - qt  # [not win]
   run:
     - python
+    - numpy
     - expat
     - pango  # [not win]
     - proj4
