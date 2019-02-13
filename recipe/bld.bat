@@ -35,7 +35,7 @@ if errorlevel 1 exit 1
 nmake install
 if errorlevel 1 exit 1
 
-pip install Magics
+pip install --no-deps https://files.pythonhosted.org/packages/9e/6a/440b027b88457f271f0017dcd94056c1641b83e411ba779cebe6b97fc778/Magics-1.0.1-py2.py3-none-any.whl
 if errorlevel 1 exit 1
 
 :: install activate/deactive scripts

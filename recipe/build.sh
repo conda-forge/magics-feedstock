@@ -62,7 +62,7 @@ fi
 ctest --output-on-failure -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 make install >> $BUILD_OUTPUT 2>&1
 
-pip install Magics >> $BUILD_OUTPUT 2>&1
+pip install --no-deps https://files.pythonhosted.org/packages/9e/6a/440b027b88457f271f0017dcd94056c1641b83e411ba779cebe6b97fc778/Magics-1.0.1-py2.py3-none-any.whl >> $BUILD_OUTPUT 2>&1
 
 # The build finished without returning an error so dump a tail of the output.
 dump_output
