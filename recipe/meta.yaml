@@ -62,7 +62,7 @@ requirements:
     - pango  # [not win]
     - proj4
     - eccodes
-    - simplejson  # [not win]
+    - simplejson
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
