@@ -34,3 +34,15 @@ if errorlevel 1 exit 1
 
 nmake install
 if errorlevel 1 exit 1
+
+:: install activate/deactive scripts
+set ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d
+set DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d
+mkdir %ACTIVATE_DIR%
+mkdir %DEACTIVATE_DIR%
+
+copy %RECIPE_DIR%\scripts\activate.bat %ACTIVATE_DIR%\magics-activate.bat
+if errorlevel 1 exit 1
+
+copy %RECIPE_DIR%\scripts\deactivate.bat %DEACTIVATE_DIR%\magics-deactivate.bat
+if errorlevel 1 exit 1
