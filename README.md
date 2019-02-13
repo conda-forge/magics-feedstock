@@ -116,5 +116,6 @@ Feedstock Maintainers
 
 * [@StephanSiemen](https://github.com/StephanSiemen/)
 * [@carletes](https://github.com/carletes/)
+* [@dtip](https://github.com/dtip/)
 * [@kynan](https://github.com/kynan/)
 
