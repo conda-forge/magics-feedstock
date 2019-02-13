@@ -40,6 +40,8 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
+    - python
+    - pip
     - pkg-config  # [not win]
     - boost
     - expat
@@ -53,6 +55,7 @@ requirements:
     - jinja2
     - qt  # [not win]
   run:
+    - python
     - expat
     - pango  # [not win]
     - proj4

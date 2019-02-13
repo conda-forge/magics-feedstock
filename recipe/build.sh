@@ -62,6 +62,8 @@ fi
 ctest --output-on-failure -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 make install >> $BUILD_OUTPUT 2>&1
 
+pip install Magics >> $BUILD_OUTPUT 2>&1
+
 # The build finished without returning an error so dump a tail of the output.
 dump_output
 

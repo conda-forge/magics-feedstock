@@ -35,6 +35,9 @@ if errorlevel 1 exit 1
 nmake install
 if errorlevel 1 exit 1
 
+pip install Magics
+if errorlevel 1 exit 1
+
 :: install activate/deactive scripts
 set ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d
 set DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d
