@@ -58,7 +58,6 @@ requirements:
     - qt  # [not win]
     - zlib
   run:
-    - python
     - numpy
     - expat
     - pango  # [not win]
