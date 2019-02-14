@@ -9,11 +9,16 @@
 
 if [[ $(uname) == Linux ]]; then
     set -e # Abort on error
+    echo Running test script.
 
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PREFIX/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib64/
 
+    echo import Magics
     python -c "import Magics"
+    echo import Magics.macro
     python -c "import Magics.macro"
+    echo import Magics.metgram
     python -c "import Magics.metgram"
+    echo import Magics.toolbox
     python -c "import Magics.toolbox"
 fi
