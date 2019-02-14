@@ -48,6 +48,7 @@ requirements:
     - expat
     - glib  # [not win]
     - pango  # [not win]
+    - cairo  # [not win]
     - proj4
     - eccodes
     - libnetcdf
@@ -55,11 +56,13 @@ requirements:
     - libiconv  # [win]
     - jinja2
     - qt  # [not win]
+    - zlib
   run:
     - python
     - numpy
     - expat
     - pango  # [not win]
+    - cairo  # [not win]
     - proj4
     - eccodes
     - simplejson
@@ -67,6 +70,7 @@ requirements:
     - pthreads-win32  # [win]
     - libiconv  # [win]
     - qt  # [not win]
+    - zlib
 
 test:
   requires:
