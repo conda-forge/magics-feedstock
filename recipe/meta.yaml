@@ -10,8 +10,8 @@ source:
   sha256: 7637fc02342b7a8ecf6c974486bd2dbfee37ddb64c12bef714d5079907edbf9a
 
 build:
-  number: 1014
-  skip: True  # [win and vc<14]
+  number: 1016
+  skip: True  # [(win and vc<14) or py<35]
   detect_binary_files_with_prefix: true
   features:
     - vc14  # [win and py>=35]
@@ -40,36 +40,56 @@ requirements:
   host:
     - {{ compiler('c') }}  # [linux]
     - {{ compiler('cxx') }}  # [linux]
+    - python
+    - pip
+    - wheel
     - pkg-config  # [not win]
     - boost
     - expat
     - glib  # [not win]
     - pango  # [not win]
+    - cairo  # [not win]
     - proj4
     - eccodes
-    - perl  # [not win]
-    - perl-xml-parser  # [not win]
-    - m2-perl  # [win]
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
     - jinja2
     - qt  # [not win]
+    - zlib
   run:
+    - numpy
     - expat
     - pango  # [not win]
+    - cairo  # [not win]
     - proj4
     - eccodes
-    - simplejson  # [not win]
+    - simplejson
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
     - qt  # [not win]
+    - zlib
 
 test:
+  requires:
+    - python
+    # the CDTs below are needed when building with Metview enabled
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxcb') }}  # [linux]
   commands:
     - conda inspect linkages -p $PREFIX magics  # [not win]
     - conda inspect objects -p $PREFIX magics  # [osx]
+  imports:
+    - Magics  # [not linux]
+    - Magics.macro  # [not linux]
+    - Magics.metgram  # [not linux]
+    - Magics.toolbox  # [not linux]
 
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
@@ -82,3 +102,4 @@ extra:
     - kynan
     - carletes
     - StephanSiemen
+    - dtip
