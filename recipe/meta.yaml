@@ -73,6 +73,7 @@ requirements:
 
 test:
   requires:
+    - python
     # the CDTs below are needed when building with Metview enabled
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
