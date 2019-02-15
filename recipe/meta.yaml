@@ -1,4 +1,4 @@
-{% set version = "3.4.0.10" %}
+{% set version = "4.0.0" %}
 
 package:
   name: magics
@@ -6,11 +6,11 @@ package:
 
 source:
   fn: Magics-{{ version }}-Source.tar.gz
-  url: https://software.ecmwf.int/wiki/download/attachments/121845745/Magics-{{ version }}-Source.tar.gz
-  sha256: 7637fc02342b7a8ecf6c974486bd2dbfee37ddb64c12bef714d5079907edbf9a
+  url: https://confluence.ecmwf.int/download/attachments/3473464/Magics-{{ version }}-Source.tar.gz?api=v2
+  sha256: 3628063666859737948ed463de8e03300432b6f68a16e616a0c5e4c3387da5ee
 
 build:
-  number: 1016
+  number: 1000
   skip: True  # [(win and vc<14) or py<35]
   detect_binary_files_with_prefix: true
   features:
