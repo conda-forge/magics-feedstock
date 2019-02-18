@@ -86,7 +86,7 @@ test:
     - conda inspect linkages -p $PREFIX magics  # [not win]
     - conda inspect objects -p $PREFIX magics  # [osx]
     - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set"  # [not win]
-    - set | find "MAGPLUS_HOME"  # [win]
+    - set | grep "MAGPLUS_HOME"  # [win]
   imports:
     - Magics  # [not linux]
     - Magics.macro  # [not linux]
