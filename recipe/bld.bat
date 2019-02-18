@@ -35,14 +35,12 @@ if errorlevel 1 exit 1
 nmake install
 if errorlevel 1 exit 1
 
-pip install --no-deps https://files.pythonhosted.org/packages/eb/e2/f415b83b1d6fd4788e0504a304bc405987bf3ba4da4bd75ea5d68491a277/Magics-1.0.3-py2.py3-none-any.whl
+pip install --no-deps https://files.pythonhosted.org/packages/c3/dd/373caa06915dd8a8ec2f344a1a2711dfb6a035e4a7ed786eb364a7715771/Magics-1.0.6-py2.py3-none-any.whl
 if errorlevel 1 exit 1
 
 :: install activate/deactive scripts
 set ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d
 set DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d
-mkdir %ACTIVATE_DIR%
-mkdir %DEACTIVATE_DIR%
 
 copy %RECIPE_DIR%\scripts\activate.bat %ACTIVATE_DIR%\magics-activate.bat
 if errorlevel 1 exit 1

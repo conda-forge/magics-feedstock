@@ -10,7 +10,7 @@ source:
   sha256: 3628063666859737948ed463de8e03300432b6f68a16e616a0c5e4c3387da5ee
 
 build:
-  number: 1000
+  number: 1002
   skip: True  # [(win and vc<14) or py<35]
   detect_binary_files_with_prefix: true
   features:
@@ -58,6 +58,7 @@ requirements:
     - qt  # [not win]
     - zlib
   run:
+    - python
     - numpy
     - expat
     - pango  # [not win]
@@ -73,7 +74,6 @@ requirements:
 
 test:
   requires:
-    - python
     # the CDTs below are needed when building with Metview enabled
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
@@ -85,6 +85,8 @@ test:
   commands:
     - conda inspect linkages -p $PREFIX magics  # [not win]
     - conda inspect objects -p $PREFIX magics  # [osx]
+    - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set"  # [not win]
+    - set | grep "MAGPLUS_HOME"  # [win]
   imports:
     - Magics  # [not linux]
     - Magics.macro  # [not linux]
