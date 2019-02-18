@@ -61,8 +61,6 @@ pip install --no-deps https://files.pythonhosted.org/packages/c3/dd/373caa06915d
 # Install activate/deactivate stripts
 ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
 DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
-mkdir $ACTIVATE_DIR >> $BUILD_OUTPUT 2>&1
-mkdir $DEACTIVATE_DIR >> $BUILD_OUTPUT 2>&1
 cp $RECIPE_DIR/scripts/activate.sh $ACTIVATE_DIR/magics-activate.sh >> $BUILD_OUTPUT 2>&1
 cp $RECIPE_DIR/scripts/deactivate.sh $DEACTIVATE_DIR/magics-deactivate.sh >> $BUILD_OUTPUT 2>&1
 
