@@ -63,3 +63,11 @@ dump_output
 
 # Nicely terminate the ping output loop.
 kill $PING_LOOP_PID
+
+# Install activate/deactivate stripts
+ACTIVATE_DIR=$PRIFIX/etc/conda/activate.d
+DEACTIVATE_DIR=$PRIFIX/etc/conda/deactivate.d
+mkdir $ACTIVATE_DIR
+mkdir $DEACTIVATE_DIR
+cp $RECPIE_DIR/scripts/activate.sh $ACTIVATE_DIR/magics-activate.sh
+cp $RECPIE_DIR/scripts/deactivate.sh $DEACTIVATE_DIR/magics-deactivate.sh
