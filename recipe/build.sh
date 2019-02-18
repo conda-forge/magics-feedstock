@@ -59,12 +59,12 @@ make install >> $BUILD_OUTPUT 2>&1
 pip install --no-deps https://files.pythonhosted.org/packages/c3/dd/373caa06915dd8a8ec2f344a1a2711dfb6a035e4a7ed786eb364a7715771/Magics-1.0.6-py2.py3-none-any.whl >> $BUILD_OUTPUT 2>&1
 
 # Install activate/deactivate stripts
-ACTIVATE_DIR=$PRIFIX/etc/conda/activate.d
-DEACTIVATE_DIR=$PRIFIX/etc/conda/deactivate.d
+ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
+DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
 mkdir $ACTIVATE_DIR >> $BUILD_OUTPUT 2>&1
 mkdir $DEACTIVATE_DIR >> $BUILD_OUTPUT 2>&1
-cp $RECPIE_DIR/scripts/activate.sh $ACTIVATE_DIR/magics-activate.sh >> $BUILD_OUTPUT 2>&1
-cp $RECPIE_DIR/scripts/deactivate.sh $DEACTIVATE_DIR/magics-deactivate.sh >> $BUILD_OUTPUT 2>&1
+cp $RECIPE_DIR/scripts/activate.sh $ACTIVATE_DIR/magics-activate.sh >> $BUILD_OUTPUT 2>&1
+cp $RECIPE_DIR/scripts/deactivate.sh $DEACTIVATE_DIR/magics-deactivate.sh >> $BUILD_OUTPUT 2>&1
 
 # The build finished without returning an error so dump a tail of the output.
 dump_output
