@@ -43,7 +43,7 @@ pin_run_as_build:
 proj4:
 - 5.2.0
 python:
-- '3.6'
+- '2.7'
 qt:
 - '5.6'
 zlib:
