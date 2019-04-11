@@ -20,7 +20,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D ENABLE_FORTRAN=0 ^
       -D GTK_PATH=%GTK% ^
-      ..
+      %SRC_DIR%
 if errorlevel 1 exit 1
 
 nmake
