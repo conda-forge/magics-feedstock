@@ -9,6 +9,7 @@ source:
   sha256: 2cf7bfdaac4b6921a86d1090bf61258862d5ff47ee8770a42af3436820ea7868
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
+    - 0002-Windows-define-PROJ_MSVC_DLL_IMPORT.patch
 
 build:
   number: 0
