@@ -2,12 +2,6 @@
 
 set -e
 
-if [[ $(uname) == Darwin ]]; then
-  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
-elif [[ $(uname) == Linux ]]; then
-  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
-fi
-
 export PYTHON="$PYTHON"
 export PYTHON_LDFLAGS="$PREFIX/lib"
 export LDFLAGS="$LDFLAGS -L$PREFIX/lib -Wl,-rpath,$PREFIX/lib"
@@ -22,7 +16,6 @@ cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
       $SRC_DIR
 
 make -j $CPU_COUNT
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib
 
 if [[ $(uname) == Linux ]]; then
     # Tell Linux where to find libGL.so.1 and other libs needed for Qt
