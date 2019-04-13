@@ -25,8 +25,6 @@ fi
 ctest --output-on-failure -j $CPU_COUNT
 make install
 
-pip install --no-deps https://files.pythonhosted.org/packages/c3/dd/373caa06915dd8a8ec2f344a1a2711dfb6a035e4a7ed786eb364a7715771/Magics-1.0.6-py2.py3-none-any.whl
-
 # Install activate/deactivate stripts
 ACTIVATE_DIR=$PREFIX/etc/conda/activate.d
 DEACTIVATE_DIR=$PREFIX/etc/conda/deactivate.d
