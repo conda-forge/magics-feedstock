@@ -12,7 +12,7 @@ source:
     - 0002-Windows-define-PROJ_MSVC_DLL_IMPORT.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
   features:
