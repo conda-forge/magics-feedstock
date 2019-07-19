@@ -5,10 +5,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://confluence.ecmwf.int/download/attachments/121845745/Magics-{{ version }}-Source.tar.gz
-  sha256: 970ad7292595c24aa57a4fe649e767be65251610eb139be7178ce6f5ddafe47e
+  url: https://confluence.ecmwf.int/download/attachments/3473464/Magics-{{ version }}-Source.tar.gz
+  sha256: e56fb1bf82d57957a61a76284ad22024f4a7c3c989f6f796e57dfd45d88400c0
   patches:
-    - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
 
 build:
   number: 3
