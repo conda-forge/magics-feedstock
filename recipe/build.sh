@@ -7,12 +7,19 @@ export PYTHON_LDFLAGS="$PREFIX/lib"
 export LDFLAGS="$LDFLAGS -L$PREFIX/lib -Wl,-rpath,$PREFIX/lib"
 export CFLAGS="$CFLAGS -fPIC -I$PREFIX/include"
 
+export REPLACE_TPL_ABSOLUTE_PATHS=0
+if [[ $(uname) == Linux ]]; then
+  export REPLACE_TPL_ABSOLUTE_PATHS=1
+fi
+
+
 mkdir ../build && cd ../build
 
 cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DENABLE_FORTRAN=0 \
       -DENABLE_NETCDF=1 \
       -DENABLE_METVIEW=1 \
+      -DREPLACE_TPL_ABSOLUTE_PATHS=$REPLACE_TPL_ABSOLUTE_PATHS \
       $SRC_DIR
 
 make -j $CPU_COUNT
