@@ -189,5 +189,4 @@ Feedstock Maintainers
 * [@carletes](https://github.com/carletes/)
 * [@dtip](https://github.com/dtip/)
 * [@kynan](https://github.com/kynan/)
-* [@iainrussell](https://github.com/iainrussell)
 
