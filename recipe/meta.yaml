@@ -10,6 +10,7 @@ source:
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
     - 0002-BUILD-do-not-export-TPL-paths-in-build-directory.patch
+    - 0003-do-not-export-TPL-paths-in-build-directory.patch
 
 build:
   number: 2
