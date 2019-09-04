@@ -13,6 +13,7 @@ source:
     - 0003-do-not-export-TPL-paths-in-build-directory.patch
     - 0004-do-not-export-TPL-paths-in-build-directory.patch
     - 0005-do-not-export-TPL-paths-in-build-directory.patch
+    - 0006-do-not-export-TPL-paths-in-build-directory.patch
 
 build:
   number: 2
