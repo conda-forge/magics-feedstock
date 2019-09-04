@@ -17,7 +17,7 @@ source:
     - 0007-do-not-export-TPL-paths-in-build-directory.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
