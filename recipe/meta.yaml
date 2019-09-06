@@ -9,12 +9,6 @@ source:
   sha256: e095531b4b4fa08c254a99e201ed828d5c3146d0a7cb277c5a6b37fe5bf7c256
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
-    - 0002-BUILD-do-not-export-TPL-paths-in-build-directory.patch
-    - 0003-do-not-export-TPL-paths-in-build-directory.patch
-    - 0004-do-not-export-TPL-paths-in-build-directory.patch
-    - 0005-do-not-export-TPL-paths-in-build-directory.patch
-    - 0006-do-not-export-TPL-paths-in-build-directory.patch
-    - 0007-do-not-export-TPL-paths-in-build-directory.patch
 
 build:
   number: 0
