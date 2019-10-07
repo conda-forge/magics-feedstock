@@ -9,10 +9,10 @@ source:
   sha256: d45701515d3329e1b3944d535c4d19f834d22a747a30da1d8c88b80affeb70cd
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
-    - 0008-Fix-for-Windows-build.patch
+    - 0009-Fix-for-Windows-build.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
