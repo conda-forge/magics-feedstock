@@ -1,0 +1,24 @@
+From 98b88b5cf4252221e53867c312e6a147fca63a6b Mon Sep 17 00:00:00 2001
+From: Iain Russell <Iain.Russell@ecmwf.int>
+Date: Mon, 7 Oct 2019 13:21:03 +0100
+Subject: [PATCH] Fix for Windows build
+
+---
+ src/web/MagConfig.cc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/web/MagConfig.cc b/src/web/MagConfig.cc
+index 1c8e2683..7b8f3c1d 100644
+--- a/src/web/MagConfig.cc
++++ b/src/web/MagConfig.cc
+@@ -234,6 +234,7 @@ void StyleLibrary::init() {
+                     ;
+                 _findclose(handle);
+             }
++        }
+ #endif
+     }
+ }
+-- 
+2.13.7
+
