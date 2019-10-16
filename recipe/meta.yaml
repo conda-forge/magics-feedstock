@@ -70,9 +70,8 @@ requirements:
     - libiconv  # [win]
     - qt  # [not win]
     - zlib
-    - mesa-libGL
     - magics-python
-     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
 
 test:
   requires:
