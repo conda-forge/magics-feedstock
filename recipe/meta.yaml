@@ -12,7 +12,7 @@ source:
     - 0010-Fix-for-Windows-build.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
