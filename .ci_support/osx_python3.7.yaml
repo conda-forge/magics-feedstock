@@ -21,7 +21,7 @@ expat:
 glib:
 - '2.58'
 libnetcdf:
-- 4.6.2
+- 4.7.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
