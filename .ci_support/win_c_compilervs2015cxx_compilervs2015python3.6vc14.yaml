@@ -30,8 +30,8 @@ pin_run_as_build:
     max_pin: x
   zlib:
     max_pin: x.x
-proj4:
-- 6.1.1
+proj:
+- 6.2.1
 python:
 - '3.6'
 vc:

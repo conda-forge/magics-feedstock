@@ -12,7 +12,7 @@ source:
     - 0010-Fix-for-Windows-build.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
@@ -47,7 +47,7 @@ requirements:
     - glib  # [not win]
     - pango  # [not win]
     - cairo  # [not win]
-    - proj4
+    - proj
     - eccodes
     - libnetcdf
     - pthreads-win32  # [win]
@@ -62,7 +62,7 @@ requirements:
     - expat
     - pango  # [not win]
     - cairo  # [not win]
-    - proj4
+    - proj
     - eccodes
     - simplejson
     - libnetcdf
@@ -83,8 +83,6 @@ test:
     - {{ cdt('libxxf86vm') }}  # [linux]
     - {{ cdt('libxcb') }}  # [linux]
   commands:
-    - conda inspect linkages -p $PREFIX magics  # [not win]
-    - conda inspect objects -p $PREFIX magics  # [osx]
     - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set"  # [not win]
     - set | grep "MAGPLUS_HOME"  # [win]
   imports:
@@ -96,6 +94,11 @@ test:
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
   license: Apache 2.0
+  license_file: 
+    - LICENSE_for_source_files 
+    - COPYING 
+    - LICENSE 
+
   license_family: Apache
   summary: ECMWF's Meteorological plotting software
 
