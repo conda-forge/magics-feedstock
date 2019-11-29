@@ -71,6 +71,7 @@ requirements:
     - qt  # [not win]
     - zlib
     - magics-python
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
 
 test:
   requires:
