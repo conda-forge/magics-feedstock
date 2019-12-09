@@ -3,11 +3,11 @@ About magics
 
 Home: https://software.ecmwf.int/wiki/display/MAGP/
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: ECMWF's Meteorological plotting software
+Summary: ECMWF's Meteorological plotting software.
 
 
 

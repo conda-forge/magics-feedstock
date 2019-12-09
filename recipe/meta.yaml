@@ -1,18 +1,19 @@
+{% set name = "Magics" %}
 {% set version = "4.2.0" %}
 
 package:
-  name: magics
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://confluence.ecmwf.int/download/attachments/3473464/Magics-{{ version }}-Source.tar.gz
+  url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
   sha256: d45701515d3329e1b3944d535c4d19f834d22a747a30da1d8c88b80affeb70cd
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
     - 0010-Fix-for-Windows-build.patch
 
 build:
-  number: 4
+  number: 5
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
@@ -21,14 +22,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    # the CDTs below are needed when building with Metview enabled
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
     - m2-bash  # [win]
     - m2-findutils  # [win]
     - m2-coreutils  # [win]
@@ -50,7 +43,6 @@ requirements:
     - pthreads-win32  # [win]
     - libiconv  # [win]
     - jinja2
-    - qt  # [not win]
     - zlib
     - magics-python
   run:
@@ -63,39 +55,32 @@ requirements:
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
-    - qt  # [not win]
     - zlib
     - magics-python
+  run_constrained:
+    # magics is incompatible with magics-metview
+    - magics-metview ==9999999999
 
 test:
-  requires:
-    # the CDTs below are needed when building with Metview enabled
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
   commands:
-    - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set"  # [not win]
+    - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set}"  # [not win]
     - set | grep "MAGPLUS_HOME"  # [win]
   imports:
-    - Magics  # [not linux]
-    - Magics.macro  # [not linux]
-    - Magics.metgram  # [not linux]
-    - Magics.toolbox  # [not linux]
+    - Magics
+    - Magics.macro
+    - Magics.metgram
+    - Magics.toolbox
 
 about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
-  license: Apache 2.0
+  license: Apache-2.0
   license_file:
     - LICENSE_for_source_files
     - COPYING
     - LICENSE
 
   license_family: Apache
-  summary: ECMWF's Meteorological plotting software
+  summary: "ECMWF's Meteorological plotting software."
 
 extra:
   recipe-maintainers:

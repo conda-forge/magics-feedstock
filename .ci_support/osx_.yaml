@@ -39,13 +39,9 @@ pin_run_as_build:
     max_pin: x.x.x
   pango:
     max_pin: x.x
-  qt:
-    max_pin: x.x
   zlib:
     max_pin: x.x
 proj:
 - 6.2.1
-qt:
-- '5.12'
 zlib:
 - '1.2'
