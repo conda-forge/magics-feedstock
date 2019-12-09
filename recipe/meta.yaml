@@ -57,6 +57,9 @@ requirements:
     - libiconv  # [win]
     - zlib
     - magics-python
+  run_constrained:
+    # magics is incompatible with magics-metview
+    - magics-metview ==9999999999
 
 test:
   commands:
