@@ -13,7 +13,7 @@ expat:
 libiconv:
 - '1.15'
 libnetcdf:
-- 4.7.1
+- 4.7.3
 pin_run_as_build:
   boost:
     max_pin: x.x.x

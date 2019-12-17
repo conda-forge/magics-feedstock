@@ -21,7 +21,7 @@ expat:
 glib:
 - '2.58'
 libnetcdf:
-- 4.7.1
+- 4.7.3
 pango:
 - '1.42'
 pin_run_as_build:
