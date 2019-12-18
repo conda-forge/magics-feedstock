@@ -10,7 +10,6 @@ source:
   sha256: 2f996ab4a9e86c778e73e55ff95fb156eb74fc921709c3dcd7eb566755fa19d2
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
-    - 0010-Fix-for-Windows-build.patch
 
 build:
   number: 0
