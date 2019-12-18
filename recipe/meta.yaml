@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,12 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: d45701515d3329e1b3944d535c4d19f834d22a747a30da1d8c88b80affeb70cd
+  sha256: 2f996ab4a9e86c778e73e55ff95fb156eb74fc921709c3dcd7eb566755fa19d2
   patches:
     - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
-    - 0010-Fix-for-Windows-build.patch
 
 build:
-  number: 6
+  number: 0
   skip: True  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
