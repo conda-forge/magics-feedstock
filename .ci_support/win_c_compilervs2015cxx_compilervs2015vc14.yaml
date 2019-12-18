@@ -21,8 +21,6 @@ pin_run_as_build:
     max_pin: x.x
   libiconv:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   vc:
     max_pin: x
   zlib:

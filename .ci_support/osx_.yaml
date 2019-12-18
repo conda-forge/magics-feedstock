@@ -35,8 +35,6 @@ pin_run_as_build:
     max_pin: x.x
   expat:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   pango:
     max_pin: x.x
   zlib:
