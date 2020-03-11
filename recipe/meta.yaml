@@ -9,7 +9,6 @@ source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
   sha256: f6c0d32c243913e53320dd94ce8e1e6a64bd9a44af77d5ac32c062bc18355b8a
   patches:
-    - 0001-Find-proj_6_0.lib-if-proj.lib-isn-t-found.patch
 
 build:
   number: 0
