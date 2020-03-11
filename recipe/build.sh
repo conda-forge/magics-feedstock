@@ -14,6 +14,7 @@ fi
 mkdir ../build && cd ../build
 
 cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
+      -DCMAKE_BUILD_TYPE=Release \
       -DENABLE_FORTRAN=0 \
       -DENABLE_NETCDF=1 \
       -DENABLE_METVIEW=0 \
