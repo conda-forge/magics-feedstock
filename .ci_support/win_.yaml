@@ -29,9 +29,5 @@ proj:
 - 6.3.1
 vc:
 - '14'
-zip_keys:
-- - vc
-  - c_compiler
-  - cxx_compiler
 zlib:
 - '1.2'
