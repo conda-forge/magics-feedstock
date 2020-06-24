@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: f6c0d32c243913e53320dd94ce8e1e6a64bd9a44af77d5ac32c062bc18355b8a
+  sha256: 544058cd334f3e28a16d00ea7811e13cdf282f9c1ebec2ad7868171d925abd24
   patches:
 
 build:
   number: 0
-  skip: True  # [(win and vc<14)]
+  skip: true  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -78,7 +78,7 @@ about:
     - LICENSE
 
   license_family: Apache
-  summary: "ECMWF's Meteorological plotting software."
+  summary: ECMWF's Meteorological plotting software.
 
 extra:
   recipe-maintainers:
