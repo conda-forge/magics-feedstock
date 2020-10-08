@@ -70,7 +70,7 @@ test:
     - Magics.metgram
     - Magics.toolbox
 
-about:e
+about:
   home: https://software.ecmwf.int/wiki/display/MAGP/
   license: Apache-2.0
   license_file:
