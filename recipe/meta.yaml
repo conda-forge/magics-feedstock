@@ -11,7 +11,7 @@ source:
   patches:
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
@@ -62,7 +62,8 @@ requirements:
 test:
   commands:
     - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set}"  # [not win]
-    - set | grep "MAGPLUS_HOME"  # [win]
+    # disabled windows test since we don't have grep installed
+    #- set | grep "MAGPLUS_HOME"  # [win]
   imports:
     - Magics
     - Magics.macro
