@@ -1,5 +1,5 @@
 boost:
-- '1.72'
+- 1.72.0
 c_compiler:
 - vs2017
 channel_sources:
@@ -11,7 +11,7 @@ cxx_compiler:
 expat:
 - '2.2'
 libiconv:
-- '1.15'
+- '1.16'
 libnetcdf:
 - 4.7.4
 pin_run_as_build:
@@ -25,6 +25,8 @@ pin_run_as_build:
     max_pin: x.x
 proj:
 - 7.1.0
+target_platform:
+- win-64
 vc:
 - '14'
 zlib:
