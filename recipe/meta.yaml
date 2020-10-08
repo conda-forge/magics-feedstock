@@ -62,14 +62,15 @@ requirements:
 test:
   commands:
     - printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set}"  # [not win]
-    - set | grep "MAGPLUS_HOME"  # [win]
+    # disabled windows test since we don't have grep installed
+    #- set | grep "MAGPLUS_HOME"  # [win]
   imports:
     - Magics
     - Magics.macro
     - Magics.metgram
     - Magics.toolbox
 
-about:
+about:e
   home: https://software.ecmwf.int/wiki/display/MAGP/
   license: Apache-2.0
   license_file:
