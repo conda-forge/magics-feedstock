@@ -10,6 +10,7 @@ jobs:
     matrix:
       win_64:
         UPLOAD_PACKAGES: 'True'
+        CONFIG: win_64
     maxParallel: 4
   timeoutInMinutes: 360
   variables:
