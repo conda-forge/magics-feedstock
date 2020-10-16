@@ -10,6 +10,7 @@ jobs:
     matrix:
       osx_64:
         UPLOAD_PACKAGES: 'True'
+        CONFIG: osx_64
     maxParallel: 8
   timeoutInMinutes: 360
 
