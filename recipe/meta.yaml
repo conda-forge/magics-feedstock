@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.4.1" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: 28d3a7ac4c96a9f699fad0b28cd6a3cb9a8dc4f2a40dcafe271552cba3faec37
+  sha256: d6f5682772ba7012f845b0c37f7bbaf5e12e6e9cf36da7524b234d8dc073ad2c
   patches:
 
 build:
-  number: 3
+  number: 0
   skip: true  # [(win and vc<14)]
   detect_binary_files_with_prefix: true
 
@@ -30,7 +30,6 @@ requirements:
     - m2-unzip  # [win]
   host:
     - pkg-config  # [not win]
-    - boost
     - expat
     - glib  # [not win]
     - pango  # [not win]
@@ -40,7 +39,6 @@ requirements:
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
-    - jinja2
     - zlib
     - magics-python
   run:
