@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 cairo:
 - '1.16'
 channel_sources:
@@ -13,11 +13,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '11'
 expat:
 - '2.2'
 glib:
-- '2.58'
+- '2.66'
 libnetcdf:
 - 4.7.4
 macos_machine:
