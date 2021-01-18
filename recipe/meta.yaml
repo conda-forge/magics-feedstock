@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.5.0" %}
+{% set version = "4.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: d6f5682772ba7012f845b0c37f7bbaf5e12e6e9cf36da7524b234d8dc073ad2c
+  sha256: 75a2550856698d32b7112f73a3d81175ba70a986a2a6cb774c33646a949ee808
   patches:
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
