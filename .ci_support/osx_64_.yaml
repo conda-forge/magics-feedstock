@@ -17,13 +17,13 @@ cxx_compiler_version:
 expat:
 - '2.2'
 glib:
-- '2.66'
+- '2'
 libnetcdf:
 - 4.7.4
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pango:
-- '1.42'
+- '1.48'
 pin_run_as_build:
   cairo:
     max_pin: x.x
