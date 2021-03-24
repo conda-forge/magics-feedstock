@@ -35,7 +35,7 @@ requirements:
     - pango  # [not win]
     - cairo  # [not win]
     - proj
-    - eccodes>=2.21.0
+    - eccodes >=2.21.0
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
@@ -46,7 +46,7 @@ requirements:
     - pango  # [not win]
     - cairo  # [not win]
     - proj
-    - eccodes>=2.21.0
+    - eccodes >=2.21.0
     - simplejson
     - libnetcdf
     - pthreads-win32  # [win]
