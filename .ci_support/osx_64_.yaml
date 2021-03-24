@@ -17,7 +17,7 @@ cxx_compiler_version:
 expat:
 - '2.2'
 glib:
-- '2.66'
+- '2'
 libnetcdf:
 - 4.7.4
 macos_machine:
