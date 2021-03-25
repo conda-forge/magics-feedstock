@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.5.3" %}
+{% set version = "4.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: e962ed2a405c208820ea208b9c279be78fe4427b0715e9835a1563f24bb4554f
+  sha256: 1ab56519f1ea30d4f86e49cb46e472d7eae0a8e28ea462e305c07046630e565e
   patches:
 
 build:
@@ -35,7 +35,7 @@ requirements:
     - pango  # [not win]
     - cairo  # [not win]
     - proj
-    - eccodes
+    - eccodes >=2.21.0
     - libnetcdf
     - pthreads-win32  # [win]
     - libiconv  # [win]
@@ -46,7 +46,7 @@ requirements:
     - pango  # [not win]
     - cairo  # [not win]
     - proj
-    - eccodes
+    - eccodes >=2.21.0
     - simplejson
     - libnetcdf
     - pthreads-win32  # [win]
