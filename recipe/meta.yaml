@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.6.0" %}
+{% set version = "4.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: 1ab56519f1ea30d4f86e49cb46e472d7eae0a8e28ea462e305c07046630e565e
+  sha256: 4786ab79fcd5ca5fc10ababfb8a1d58e5078b8a7246b81c9fba53b7443bf46c0
   patches:
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
@@ -53,6 +53,7 @@ requirements:
     - libiconv  # [win]
     - zlib
     - magics-python
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
   run_constrained:
     # magics is incompatible with magics-metview
     - magics-metview ==9999999999
