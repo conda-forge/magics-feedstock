@@ -1,0 +1,27 @@
+c_compiler:
+- vs2017
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2017
+expat:
+- '2'
+libiconv:
+- '1.16'
+libnetcdf:
+- 4.8.0
+pin_run_as_build:
+  libiconv:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+proj:
+- 8.0.1
+target_platform:
+- win-64
+vc:
+- '14'
+zlib:
+- '1.2'
