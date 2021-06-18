@@ -12,7 +12,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win and vc<14]
+  skip: true  # [win]
   detect_binary_files_with_prefix: true
 
 requirements:
