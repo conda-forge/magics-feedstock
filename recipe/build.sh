@@ -13,7 +13,7 @@ fi
 
 mkdir ../build && cd ../build
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
+cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_BUILD_TYPE=Release \
       -DENABLE_FORTRAN=0 \
       -DENABLE_NETCDF=1 \
@@ -23,7 +23,9 @@ cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
       $SRC_DIR
 
 make -j $CPU_COUNT
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
 ctest --output-on-failure -j $CPU_COUNT
+fi
 make install
 
 # Install activate/deactivate stripts

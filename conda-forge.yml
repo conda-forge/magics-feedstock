@@ -1,9 +1,12 @@
-provider:
-  osx: azure
-  linux: azure
-  win: azure
 azure:
-   settings_win:
-     pool:
-       vmImage: windows-2019
+  settings_win:
+    pool:
+      vmImage: windows-2019
+build_platform:
+  osx_arm64: osx_64
 conda_forge_output_validation: true
+provider:
+  linux: azure
+  osx: azure
+  win: azure
+test_on_native_only: true
