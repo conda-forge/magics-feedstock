@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - cmake
+    - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - m2-bash  # [win]
