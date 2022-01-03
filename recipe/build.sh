@@ -23,7 +23,7 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=$PREFIX \
       $SRC_DIR
 
 make -j $CPU_COUNT
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 ctest --output-on-failure -j $CPU_COUNT
 fi
 make install
