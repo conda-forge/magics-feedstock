@@ -7,7 +7,7 @@ c_compiler:
 c_compiler_version:
 - '14'
 cairo:
-- '1.16'
+- '1'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -26,15 +26,8 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 pango:
 - '1.50'
-pin_run_as_build:
-  cairo:
-    max_pin: x.x
-  pango:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 proj:
-- 9.1.0
+- 9.1.1
 target_platform:
 - osx-64
 zip_keys:
