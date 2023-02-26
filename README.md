@@ -1,11 +1,11 @@
-About magics
-============
+About magics-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/magics-feedstock/blob/main/LICENSE.txt)
 
 Home: https://confluence.ecmwf.int/display/MAGP/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/magics-feedstock/blob/main/LICENSE.txt)
 
 Summary: ECMWF's Meteorological plotting software.
 
