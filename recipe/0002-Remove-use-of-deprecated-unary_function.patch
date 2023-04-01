@@ -1,0 +1,25 @@
+From 9266ab69e9d863f75ebd7ad95f4d32b26794aa9a Mon Sep 17 00:00:00 2001
+From: Iain Russell <Iain.Russell@ecmwf.int>
+Date: Sat, 1 Apr 2023 13:10:32 +0100
+Subject: [PATCH] Remove use of deprecated unary_function
+
+---
+ src/common/Polyline.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/common/Polyline.cc b/src/common/Polyline.cc
+index 76a117cf..836697da 100644
+--- a/src/common/Polyline.cc
++++ b/src/common/Polyline.cc
+@@ -107,7 +107,7 @@ struct SouthCleaner {
+ 
+     bool operator()(PaperPoint& point) { return point.y_ < -89; }
+ };
+-struct LonFinder : std::unary_function<PaperPoint, bool> {
++struct LonFinder {
+     LonFinder() {}
+ 
+     bool operator()(PaperPoint& point) const { return (same(point.x_, -180.)); }
+-- 
+2.32.0 (Apple Git-132)
+
