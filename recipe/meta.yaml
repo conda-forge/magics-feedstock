@@ -10,6 +10,7 @@ source:
   sha256: 2fe8b149dc977976892d06605ce351ba80fa74c537d839438e54c8b199b37efb
   patches:
     - 0001-Require-C-17-compiler.patch
+    - 0002-Remove-use-of-deprecated-unary_function.patch
 
 build:
   number: 2
