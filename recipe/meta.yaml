@@ -13,7 +13,7 @@ source:
     - 0002-Remove-use-of-deprecated-unary_function.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
