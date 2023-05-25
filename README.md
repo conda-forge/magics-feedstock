@@ -181,4 +181,5 @@ Feedstock Maintainers
 * [@dtip](https://github.com/dtip/)
 * [@iainrussell](https://github.com/iainrussell/)
 * [@kynan](https://github.com/kynan/)
+* [@zklaus](https://github.com/zklaus/)
 
