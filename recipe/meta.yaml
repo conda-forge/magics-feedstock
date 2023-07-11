@@ -1,5 +1,5 @@
 {% set name = "Magics" %}
-{% set version = "4.13.0" %}
+{% set version = "4.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
-  sha256: 2fe8b149dc977976892d06605ce351ba80fa74c537d839438e54c8b199b37efb
+  sha256: 263818fc163945280d5df277e0c7f0b9ef701e698c991d9ffec8caf82a5f70c8
   patches:
     - 0001-Require-C-17-compiler.patch
     - 0002-Remove-use-of-deprecated-unary_function.patch
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
