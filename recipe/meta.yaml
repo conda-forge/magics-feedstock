@@ -8,9 +8,6 @@ package:
 source:
   url: https://confluence.ecmwf.int/download/attachments/3473464/{{ name }}-{{ version }}-Source.tar.gz
   sha256: 53ebbd74eef8bad8e9d1dd53f1a2ada3185b52705561f7b4a50dd0b9d511a603
-  patches:
-    - 0001-Require-C-17-compiler.patch
-    - 0002-Remove-use-of-deprecated-unary_function.patch
 
 build:
   number: 0
