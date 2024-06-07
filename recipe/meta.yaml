@@ -10,7 +10,7 @@ source:
   sha256: a38033aa8bd5845c55ad10f9bf5aaee932177e3aa88cf8f174814d825d354285
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
@@ -19,6 +19,7 @@ requirements:
     - cmake
     - make
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - m2-bash  # [win]
     - m2-findutils  # [win]
@@ -53,7 +54,6 @@ requirements:
     - libiconv  # [win]
     - zlib
     - magics-python
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
   run_constrained:
     # magics is incompatible with magics-metview
     - magics-metview ==9999999999
