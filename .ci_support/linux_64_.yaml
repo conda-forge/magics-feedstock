@@ -8,8 +8,6 @@ c_stdlib_version:
 - '2.17'
 cairo:
 - '1'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -25,7 +23,7 @@ expat:
 glib:
 - '2'
 libnetcdf:
-- 4.9.3
+- 4.10.0
 pango:
 - '1'
 proj:
