@@ -23,7 +23,7 @@ expat:
 glib:
 - '2'
 libnetcdf:
-- 4.9.3
+- 4.10.0
 pango:
 - '1'
 proj:
