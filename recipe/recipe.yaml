@@ -26,58 +26,48 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
     - if: win
-      then: m2-bash
-    - if: win
-      then: m2-findutils
-    - if: win
-      then: m2-coreutils
-    - if: win
-      then: m2-grep
-    - if: win
-      then: m2-sed
-    - if: win
-      then: m2-gawk
-    - if: win
-      then: m2-diffutils
-    - if: win
-      then: m2-unzip
+      then:
+        - m2-bash
+        - m2-findutils
+        - m2-coreutils
+        - m2-grep
+        - m2-sed
+        - m2-gawk
+        - m2-diffutils
+        - m2-unzip
   host:
     - if: not win
-      then: pkg-config
+      then:
+        - pkg-config
+        - glib
+        - pango
+        - xorg-xorgproto
+        - cairo
     - expat
-    - if: not win
-      then: glib
-    - if: not win
-      then: pango
-    - if: not win
-      then: xorg-xorgproto
-    - if: not win
-      then: cairo
     - proj
     - eccodes >=2.21.0
     - libnetcdf
     - if: win
-      then: pthreads-win32
-    - if: win
-      then: libiconv
+      then:
+        - pthreads-win32
+        - libiconv
     - zlib
     - magics-python
   run:
     - expat
     - if: not win
-      then: pango
-    - if: not win
-      then: xorg-xorgproto
-    - if: not win
-      then: cairo
+      then:
+        - pango
+        - xorg-xorgproto
+        - cairo
     - proj
     - eccodes >=2.21.0
     - simplejson
     - libnetcdf
     - if: win
-      then: pthreads-win32
-    - if: win
-      then: libiconv
+      then:
+        - pthreads-win32
+        - libiconv
     - zlib
     - magics-python
   run_constraints:
