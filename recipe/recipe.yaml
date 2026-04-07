@@ -1,0 +1,113 @@
+schema_version: 1
+
+context:
+  name: Magics
+  version: "4.16.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://confluence.ecmwf.int/download/attachments/3473464/${{ name }}-${{ version }}-Source.tar.gz
+  sha256: b5cf365e10e43abbb2e0b14db8e8d8db90486031f6c0de24b0b01c17a0197cf5
+
+build:
+  number: 4
+  skip: win
+  prefix_detection:
+    ignore_binary_files: true
+
+requirements:
+  build:
+    - cmake
+    - make
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - if: win
+      then: m2-bash
+    - if: win
+      then: m2-findutils
+    - if: win
+      then: m2-coreutils
+    - if: win
+      then: m2-grep
+    - if: win
+      then: m2-sed
+    - if: win
+      then: m2-gawk
+    - if: win
+      then: m2-diffutils
+    - if: win
+      then: m2-unzip
+  host:
+    - if: not win
+      then: pkg-config
+    - expat
+    - if: not win
+      then: glib
+    - if: not win
+      then: pango
+    - if: not win
+      then: xorg-xorgproto
+    - if: not win
+      then: cairo
+    - proj
+    - eccodes >=2.21.0
+    - libnetcdf
+    - if: win
+      then: pthreads-win32
+    - if: win
+      then: libiconv
+    - zlib
+    - magics-python
+  run:
+    - expat
+    - if: not win
+      then: pango
+    - if: not win
+      then: xorg-xorgproto
+    - if: not win
+      then: cairo
+    - proj
+    - eccodes >=2.21.0
+    - simplejson
+    - libnetcdf
+    - if: win
+      then: pthreads-win32
+    - if: win
+      then: libiconv
+    - zlib
+    - magics-python
+  run_constraints:
+    - magics-metview ==9999999999
+
+tests:
+  - python:
+      imports:
+        - Magics
+        - Magics.macro
+        - Magics.metgram
+        - Magics.toolbox
+      pip_check: false
+  - script:
+      - if: not win
+        then: printf "%s\n" "${MAGPLUS_HOME:?MAGPLUS_HOME is not set}"
+
+about:
+  license: Apache-2.0
+  license_file:
+    - LICENSE_for_source_files
+    - COPYING
+    - LICENSE
+  summary: ECMWF's Meteorological plotting software.
+  homepage: https://confluence.ecmwf.int/display/MAGP/
+
+extra:
+  recipe-maintainers:
+    - kynan
+    - carletes
+    - StephanSiemen
+    - dtip
+    - iainrussell
