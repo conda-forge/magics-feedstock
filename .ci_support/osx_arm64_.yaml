@@ -22,6 +22,8 @@ cxx_compiler_version:
 - '19'
 expat:
 - '2'
+freetype:
+- '2'
 glib:
 - '2'
 libnetcdf:
@@ -31,7 +33,7 @@ macos_machine:
 pango:
 - '1'
 proj:
-- '9.7'
+- '9.8'
 target_platform:
 - osx-arm64
 zip_keys:
