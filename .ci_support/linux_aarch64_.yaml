@@ -29,7 +29,7 @@ libnetcdf:
 pango:
 - '1'
 proj:
-- '9.8'
+- '9.9'
 target_platform:
 - linux-aarch64
 zip_keys:
